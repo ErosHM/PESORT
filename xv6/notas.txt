@@ -1,0 +1,235 @@
+    1  cd
+    2  su
+    3  sudo apt-get update
+    4  pyzo
+    5  su
+    6  git clone git@github.com:PyAr/tutorial.git
+    7  apt install git
+    8  su
+    9  ls
+   10  cd Escritorio/
+   11  python
+   12  pm-suspend
+   13  sudo pm-suspend
+   14  su
+   15  suspend
+   16  su
+   17  ls
+   18  cd Escritorio/Practicas/
+   19  cd Practica1
+   20  ld a2.0 a2.0 -0 a.out -T test.lds
+   21  ld a2.0 a2.0 -o a.out -T test.lds
+   22  ls
+   23  ld a1.o a2.o -o a.out -T test.lds
+   24  ld -m i386 a1.o a2.o -o a.out -T test.lds
+   25  apt -get install tree
+   26  apt-get install tree
+   27  su
+   28  sleep
+   29  sleep --help
+   30  ls
+   31  cd
+   32  ls
+   33  su
+   34  su
+   35  wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+   36  wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+   37  sudo apt-get update
+   38  su
+   39  cd /Escr
+   40  ls
+   41  su
+   42  50+50
+   43  clear
+   44  sum
+   45  clear
+   46  su
+   47  make clean
+   48  su
+   49  pacmd list-cards
+   50  pacmd set-card-profile 0 a2dp_sink
+   51  pacmd set-card-profile 2 a2dp_sink
+   52  pacmd set-card-profile 1 a2dp_sink
+   53  pacmd set-card-profile 3 a2dp_sink
+   54  pacmd set-card-profile 4 a2dp_sink
+   55  sudo apt-get install pulseaudio-module-bluetooth
+   56  pactl load-module module-bluetooth-discover
+   57  sudo apt-get install pulseaudio-module-bluetooth
+   58  pactl load-module module-bluetooth-discover
+   59  pacmd list-sinks
+   60  pacmd set-card-profile 7 a2dp_sink
+   61  gedit /etc/bluetooth/audio.conf
+   62  sudo -H nautilus
+   63  cd
+   64  ls
+   65  cd ..
+   66  ls
+   67  cd ..
+   68  ls
+   69  cd etc/
+   70  ls
+   71  cd bluetooth/
+   72  ls
+   73  vim audio.conf
+   74  ls
+   75  vim main.conf
+   76  sudo snap install <pycharm-professional·or·pycharm-community> --classic
+   77  sudo snap install <pycharm-community> --classic
+   78  sudo snap install pycharm-community --classic
+   79  sudo install pycharm-community --classic
+   80  sudo apt install pycharm-community --classic
+   81  sudo apt install pycharm-community
+   82  apt install snap
+   83  sudo apt install snap
+   84  sudo snap install pycharm-community --classic
+   85  ls
+   86  cd Descargas/
+   87  ls
+   88  sudo snap install <pycharm-professional·or·pycharm-community> --classic
+   89  sudo snap install <pycharm-community> --classic
+   90  sudo snap install pycharm-community --classic
+   91  tar xvzf pycharm-community-2018.1.2.tar.gz 
+   92  sudo snap install pycharm-community --classic
+   93  sudo tar xfz pycharm-*.tar.gz -C /opt/
+   94  cd /opt
+   95  ls
+   96  cd pycharm-community-2018.1.2/
+   97  ls
+   98  cd bin
+   99  ls
+  100  pycharm.sh
+  101  ./pycharm.sh 
+  102  sudo apt-get update
+  103  sudo apt-get upgrade
+  104  su
+  105  pycharm.sh
+  106  cd
+  107  cd ..
+  108  ls
+  109  cd etc/
+  110  ls
+  111  cs ..
+  112  cd ..
+  113  ls
+  114  cd bin
+  115  ls
+  116  cd ..
+  117  cd opt
+  118  ls
+  119  cd pycharm-community-2018.1.2/
+  120  ls
+  121  cd bin/
+  122  ls
+  123  ./pycharm.sh 
+  124  udo snap install [pycharm-community] --classic
+  125  sudo snap install [pycharm-community] --classic
+  126  '/home/eros/Descargas/pycharm-community-2018.1.2/bin/pycharm.sh' 
+  127  cd ..
+  128  ls
+  129  cd opt
+  130  ls
+  131  cd pycharm-community-2018.1.2/
+  132  ls
+  133  cd bin
+  134  ls
+  135  ./pycharm.sh 
+  136  sudo apt-get install libcanberra-gtk3-module
+  137  ./pycharm.sh 
+  138  sudo apt-get install libcanberra-gtk-module
+  139  ./pycharm.sh 
+  140  apt-cache search "^r-.*" | sort
+  141  apt-get update
+  142  su
+  143  top command
+  144  ps -aux | less
+  145  ps -U root -u root -N
+  146  kill pulseaudio
+  147  ps -U root -u root -N
+  148  kill 1069
+  149  ps -U root -u root -N
+  150  kill 828
+  151  kill 0828
+  152  ps -U root -u root -N
+  153  kill 2210
+  154  ps -U root -u root -N
+  155  kill 1842
+  156  ps -U root -u root -N
+  157  kill 1174
+  158  ps -U root -u root -
+  159  ps -U
+  160  ps -aux | less
+  161  ps -U root -u root -N
+  162  su
+  163  cd
+  164  ls Escritorio/
+  165  cd Escritorio/
+  166  ls
+  167  cd PuebasLinuxMod/
+  168  ls
+  169  cd linux-2.6.31.6_modLMC/
+  170  man qemu
+  171  man qemu-system
+  172  qemu-system-i386 -nongraphic -no-reboot -kernel arch/x86/boot/bzImage -initrd ../root.cpio.gz -append "panic=1"
+  173  si
+  174  qemu-system-i386 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd ../root.cpio.gz -append "panic=1"
+  175  find . |cpio -H newc -o | gzip > ../root.cpio.gz
+  176  qemu-system-i386 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd ../root.cpio.gz -append "panic=1"
+  177  ls
+  178  cd Escritorio/
+  179  ls
+  180  cd PuebasLinuxMod/
+  181  ls
+  182  cd linux-2.6.31.6_modLMC/
+  183  ls
+  184  qemu-system-i386 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd ../root.cpio.gz -append "panic=1 console=tty50"
+  185  cd Escritorio/PuebasLinuxMod/
+  186  ls
+  187  qemu-system-i386 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd ../root.cpio.gz -append "panic=1 console=tty50"
+  188  find . |cpio -H newc -o | gzip > ../root.cpio.gz
+  189  qemu-system-i386 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd ../root.cpio.gz -append "panic=1 console=tty50"
+  190  cd linux-2.6.31.6_modLMC/
+  191  qemu-system-i386 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd ../root.cpio.gz -append "panic=1 console=tty50"
+  192  ls
+  193  ls ..
+  194  cd ..
+  195  mk dir root
+  196  mkdir root
+  197  cd root/
+  198  cp -v ../hello.c .
+  199  gcc --static hello.c -o init
+  200  ls -hgo
+  201  find . |cpio -H newc -o | gzip > ../root.cpio.gz
+  202  cd ..
+  203  cd linux-2.6.31.6_modLMC/
+  204  find . |cpio -H newc -o | gzip > ../root.cpio.gz
+  205  cd ..
+  206  cd
+  207  cd Escritorio/PuebasLinuxMod/
+  208  ls
+  209  cd root/
+  210  find . |cpio -H newc -o | gzip > ../root.cpio.gz
+  211  cd ..
+  212  tar -xzvf linux-2.6.31.6_modLMC.tar.gz 
+  213  qemu-system-i386 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd ../root.cpio.gz -append "panic=1 console=tty50"
+  214  cd linux-2.6.31.6_modLMC/
+  215  qemu-system-i386 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd ../root.cpio.gz -append "panic=1 console=tty50"
+  216  qemu-system-i386 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd /home/eros/Escritorio/PuebasLinuxMod/root.cpio.gz -append "panic=1 console=tty50"
+  217  qemu-system-i386 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd /home/eros/Escritorio/PuebasLinuxMod/root.cpio.gz -append "panic=1 console=ttyS0"
+  218  qemu-system-i386 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd ../root.cpio.gz -append "panic=1 console=tty50"
+  219  qemu-system-i386 -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd ../root.cpio.gz -append "panic=1 console=ttyS0"
+  220  ls -hgo
+  221  ls -lh. ..
+  222  ls -lh ..
+  223  pushd ../root/
+  224  ls
+  225  gcc --static hello.c -o init
+  226  find .|cpio -H newc -o|gzip >../root.cpio.gz
+  227  ls -hgotr ..
+  228  cd ../linux-2.6.31.6_modLMC/
+  229  qemu-system-i386  -nographic -no-reboot -kernel arch/x86/boot/bzImage -initrd ../root.cpio.gz -append "panic=1 console=ttyS0"
+  230  cd ../root/
+  231  cat hello.c 
+  232  ./init 
+  233  uname -a
+  234  cd ..
+  235  history>notas.txt
