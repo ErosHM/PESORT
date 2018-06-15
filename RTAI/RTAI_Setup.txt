@@ -1,0 +1,96 @@
+Preparation
+download and unzip
+cd /usr/src
+curl -L https://www.rtai.org/userfiles/downloads/RTAI/rtai-4.1.tar.bz2 | tar xj
+curl -L https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.10.32.tar.xz | tar xJ
+curl -L http://kernel.ubuntu.com/~kernel-ppa/mainline/v3.10.32-saucy/linux-image-3.10.32-031032-generic_3.10.32-031032.201402221635_amd64.deb -o linux-image-3.10.32-generic-amd64.deb
+dpkg-deb -x linux-image-3.10.32-generic-amd64.deb linux-image-3.10.32-generic-amd64
+link (optional)
+ln -s linux-3.10.32 linux
+ln -s rtai-4.1 rtai
+package requirement
+update apt-get list
+
+apt-get update
+General:
+
+apt-get install cvs subversion build-essential git-core g++-multilib gcc-multilib bc
+Rtai
+
+apt-get install libtool automake libncurses5-dev kernel-package
+scilab 5.5.0
+
+apt-get install default-jre docbook-xsl fop javahelp2 libavalon-framework-java libbatik-java libfftw3-3 libflexdock-java libgfortran3 libhdf5-7 libjeuclid-core-java libjgoodies-looks-java libjgraphx-java libjhdf5-java libjlatexmath-fop-java libjlatexmath-java libjogl-java libjrosetta-java liblapack3gf libncurses5 libpcre3 libpvm3 libquadmath0 libsaxon-java libskinlf-java libstdc++6 libtinfo5 libxml2 tcl8.5 tk8.5 zlib1g libgcc1 libc6 libblas-dev libblas3gf libatlas3gf-base gfortran liblapack-dev
+qrtailab
+
+apt-get install libqt4-dev libqwt5-qt4-dev
+compile RTAI Linux kernel
+copy ubuntu kernel 3.10 original config
+
+cp /usr/src/linux-image-3.10.32-generic-amd64/boot/config-3.10.32-031032-generic /usr/src/linux/.config
+patch for kernel
+
+cd /usr/src/linux
+patch -p1 < /usr/src/rtai/base/arch/x86/patches/hal-linux-3.10.32-x86-5.patch
+config
+
+make menuconfig
+Set up the kernel settings as follows
+
+Processor type and features
+	-> Processor family = Select yours
+	-> Maximum number of CPUs (NR_CPUS) = Set your number (it's generally "4")
+	-> SMT (Hyperthreading) scheduler support = DISABLE IT
+Power Management and ACPI options
+	CPU idle PM support = DISABLE IT
+build
+
+make -j `getconf _NPROCESSORS_ONLN` deb-pkg LOCALVERSION=-rtai 
+install
+
+dpkg -i linux-image-3.10.32-rtai_3.10.32-rtai-1_amd64.deb
+dpkg -i linux-headers-3.10.32-rtai_3.10.32-rtai-1_amd64.deb
+modify grub config, set GRUB_CMDLINE_LINUX_DEFAULT as:
+
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash lapic=notscdeadline"
+apply grub config
+
+update-grub
+Now, reboot your system. choose the RTAI in GRUB boot menu.
+
+RTAI installation
+Now that the system has restarted, make sure you booted on your RTAI kernel
+
+uname -r 
+it should show:
+
+3.10.32-rtai
+config RTAI
+
+cd /usr/src/rtai
+make menuconfig
+UPDATE the CPUs number according to your configuration.
+
+build
+
+make -j `getconf _NPROCESSORS_ONLN`
+install
+
+make install
+add following line to your ~/.bashrc (if you use bash)
+
+export PATH=/usr/realtime/bin:$PATH 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/realtime/lib
+use new environment variable
+
+source ~/.bashrc
+Create a file /etc/ld.so.conf.d/rtai.conf with the content
+
+/usr/realtime/lib
+run ldconfigin order to take it into account
+
+ldconfig
+Now, run latency test:
+
+cd /usr/realtime/testsuite/kern/latency
+./run
